@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# Travel Article App with PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositori ini berisi implementasi aplikasi web untuk menampilkan referensi destinasi traveling. Proyek ini dirancang untuk memudah kan user dalam menemukan referensi traveling dengan desain UI responsif dan mendukung teknologi PWA (Progressive Web App).
 
-Currently, two official plugins are available:
+## 🚀 Fitur
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Explore Page
+- Desain responsif untuk semua jenis perangkat.
+- Menampilkan kategori dan juga beranda destinasi dengan pendekatan infinite scroll.
+- Mengambil data dari endpoint API yang disediakan.
 
-## Expanding the ESLint configuration
+### Dashboard Page
+- Menampilkan informasi data mengenai Article yang ada.
+- Data tetap tersedia meskipun halaman di-refresh.
+- Ditampilkan data berupa chart
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Article Page
+- Menampilkan List Article dari user yang login.
+- Mengelola data article, mulai dari menambahkan, mengedit dan juga menghapus article.
 
-- Configure the top-level `parserOptions` property like this:
+### Category Page
+- Menampilkan List Category.
+- Mengelola data category, mulai dari menambahkan, mengedit dan juga menghapus category.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Profile Page
+- Menampilkan data profile dari user yang login.
+- Menampilkan list article yang pernah di review/comment.
+
+## 🛠️ Teknologi yang Digunakan
+
+- **Framework**: [Vite](https://vite.dev/)
+- **State Management**: [Redux](https://redux.js.org/)
+- **Styling**: Tailwind CSS
+- **API Integration**: Axios atau Fetch API
+- **Utilities**: Day.js untuk manipulasi tanggal.
+
+## 📦 Instalasi dan Setup
+
+1. Clone the repository:
+
+```bash
+git clone git@github.com:renalfa/travel-article-app.git
 ```
+2. Navigate to the project directory:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```bash
+cd travel-article-app
+```
+3. Install the dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+yarn install
+```
+4. Run the development server:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn dev
 ```
