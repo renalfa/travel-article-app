@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "outfit-thin";
+    src: url("/fonts/Outfit-Thin.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-extralight";
+    src: url("/fonts/Outfit-ExtraLight.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-light";
+    src: url("/fonts/Outfit-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-regular";
+    src: url("/fonts/Outfit-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-medium";
+    src: url("/fonts/Outfit-Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-semibold";
+    src: url("/fonts/Outfit-SemiBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-bold";
+    src: url("/fonts/Outfit-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-extrabold";
+    src: url("/fonts/Outfit-ExtraBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "outfit-black";
+    src: url("/fonts/Outfit-Black.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "jost-light";
+    src: url("/fonts/Jost-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "jost-regular";
+    src: url("/fonts/Jost-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "jost-semibold";
+    src: url("/fonts/Jost-SemiBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "jost-black";
+    src: url("/fonts/Jost-Black.ttf") format("truetype");
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .video-clip {
+    clip-path: polygon(0% 0%, 100% 0%, 90% 80%, 40% 100%, 0% 100%);
+  }
+}
