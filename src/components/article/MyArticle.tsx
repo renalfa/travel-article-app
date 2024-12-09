@@ -30,6 +30,10 @@ const MyArticle: FC<Props> = ({
         Artikel Saya
       </h2>
 
+      {myArticles?.length === 0 && (
+        <p className="mt-8 text-center text-black/50">Belum ada artikel</p>
+      )}
+
       <div className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-2">
         {myArticles?.map((article) => (
           <div key={article.documentId}>

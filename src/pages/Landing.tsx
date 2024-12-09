@@ -44,7 +44,7 @@ const Landing = () => {
   useEffect(() => {
     if (user) {
       setView("landing");
-      navigate("/dashboard");
+      navigate("/explore");
     }
   }, [user]);
 
